@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="utility.css"> -->
+    <title>Document</title>
+    
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        :root{
+            --a:
+        }
+         *{
+            margin: 0;
+            padding: 0;
+         }
+        .left{
+            width: 25vw;
+            padding: 25px;
+            
+            
+        }
+        .close{
+            display: none;
+        }
+        .right{
+            width: 75vw;
+            position: relative;
+       
+
+            
+        
+        }
+        .border{
+
+            margin: 30px;
+            border-radius: 10px;
+            background-color:  #121212;
+            
+            
+        }
+        .flex{
+            display: flex;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        .item-center{
+            align-items: center;
+        }
+        .home ul li{
+            width: 25px;
+            list-style: none;
+            display: flex;
+            gap: 17px;
+            padding: 12px;
+            font-weight: bold;
+         }
+       .black{
+        background-color: black;
+        color: white;
+       }
+       .invert{
+        filter: invert(1);
+        
+       }
+       .round{
+        border-radius: 7px;
+       }
+      
+       .p-1{
+        padding: 10px;
+       }
+       .m-1{
+        margin: 5px;
+       }
+       .grey{
+        background-color: #121212;
+        
+       }
+       .heading{
+            width: 100%;
+            display: flex;
+            gap: 17px;
+            padding: 12px;
+            font-weight: bold;
+            align-items: center;
+            padding: 23px 14px;
+            font-size: 13px;
+       }
+       .heading img{
+            width: 30px;
+       }
+       .library{
+            min-height: 87vh;
+            position: relative;
+       }
+       .footer{
+        display: flex;
+        gap: 13px;
+        position: absolute;
+        bottom: 0;
+        padding: 10px 0px;
+        
+       }
+       .footer a{
+        display: flex;
+        color: grey;
+        font-size: 15px;
+       }
+       .header img{
+        height: 15px;
+        padding: 15px;
+        
+       }
+       .header{
+        display: flex;
+        justify-content: space-between;
+        background-color:rgb(34, 34, 34) ;
+        
+        
+       }
+       .header >*{
+        padding: 20px;
+        
+       }
+       .b1{
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color:rgb(34, 34, 34) ;
+        color: aliceblue;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        
+       }
+       .b2{
+        font-weight: bold;
+        border-radius: 30px;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color:rgb(252, 251, 251) ;
+        color: rgb(6, 0, 0);
+        border-color: rgb(249, 251, 251);
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+        }
+        .b2:hover{
+            background-color: rgb(6, 0, 0);
+            color: white;
+        }
+        .spoty h1{
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .cardcontiner{
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            flex-wrap: wrap;
+            margin: 25px;
+            max-height: 60vh;
+            overflow-y:auto;
+            padding-bottom: 54px;
+          
+        }
+        
+       .card{
+            width: 230px;
+            padding: 11px;
+            background-color:rgb(34, 34, 34) ;
+            border-radius: 15px;
+            position: relative;
+        }
+        .card >*{
+            padding-top:11px;
+        }
+        .card img{
+            width: 100%;    
+            object-fit: contain;
+            border-radius: 14px;
+           
+        }
+        .card:hover{
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out;
+            background-color: rgb(8, 4, 4);
+            cursor: pointer;
+            --a:1;
+        }
+        .play{
+            width: 38px;
+            height: 38px;
+            background-color: #1fdf64;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 185px;
+            right: 18px;
+            opacity: var(--a);
+            transition: all 1s ease-in-out;
+
+        }
+        
+        .playbar{
+            position:fixed;
+            bottom: 30px;
+            background:#dad5d5;
+            border-radius: 20px;
+            width: 62vw;
+            padding: 12px;
+            filter: invert(1);
+            height: 41px;
+            
+            
+            
+        }
+        .songbtn{
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        
+        }
+        .songlist ul{
+            padding: 0 11px;
+        }
+        .songlist ul li{
+            list-style: none;
+            padding: 10px;
+            font-weight: bold;
+            display: flex;
+            gap: 11px;
+            cursor: pointer;
+            padding:12px 0 ;
+            border-radius: 6px;
+            border: 2px solid white;
+            margin: 13px 0;
+           
+          
+        }
+        .playnow{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+        }
+        .songlist.songinfo{
+            font-size: 16px;
+            width: 344px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .songlist{
+            max-height: 70vh;
+            overflow: auto;
+            margin-bottom: 44px;
+           
+        }
+        .playnow span{
+            font-size: 13px;
+            width: 63px;
+            padding: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .seek{
+            height: 3px;
+            width: 96%;
+            border-radius: 12px;
+            position: absolute;
+            bottom: 0;
+            border:2px solid rgb(7, 0, 0);
+            margin: 5px;
+            cursor: pointer;
+        }
+        .circle{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(7, 0, 0);
+            bottom: 7px;
+            position: relative;
+            left: 0%;
+            transition: left 0.5s ;
+        }
+        .songbtn{
+            cursor: pointer;
+            margin: auto;
+            
+        }
+        .songinfo,.songtime{
+          color: black;
+          padding: 0 12px;
+          width: 100px;
+        }
+        .abovebar{
+            display: flex;
+            justify-content: space-between;
+            
+           
+        }
+        .ham{
+            display: none;
+            cursor: pointer;
+        }
+        .hamcontainer{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 10px;
+        }
+        .volume{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .range input{
+            cursor: pointer;
+        }
+        .timevol{
+            display: flex;
+            gap: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+       
+       
+       
+        @media screen and (max-width: 1340px){
+            .left{
+                position: absolute;
+                left: -120%;
+                transition: all 0.5s;
+                z-index: 1;
+                width: 450px;
+                background-color: black;
+                padding: 0;
+            
+
+            }
+            .left .close{
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                width: 370px;
+            }
+            .right{
+                width: 100vw;
+                margin: 0;
+            }
+            .card{
+                width: 100%;
+            }
+            .card img{
+                width: 100%;
+            }
+            .cardcontiner{
+                margin: 0;
+                justify-content: center;
+                
+            }
+            .footer{
+                display: none;
+            }
+            .play{
+               width: calc(100vw-60px);
+            }
+            .songlist ul li{
+                padding: 10px;
+            }
+            .songlist .info{
+                width: 100%;
+            }
+            .songlist ul{
+                padding: 0;
+            }
+            .songlist ul li{
+                padding: 10px;
+            }
+            .playnow span{
+                padding: 10px;
+            }
+            .playbar{
+                width: 100vw;
+            }
+            .seek{
+                width: 100%;
+            }
+            .circle{
+                width: 10px;
+                height: 10px;
+            }
+            .songbtn{
+                gap: 10px;
+            }
+            .songinfo,.songtime{
+                font-size: 10px;
+            }
+            .ham{
+                display: block;
+            }
+            .close{
+                display: block;
+            }
+            .abovebar{
+                flex-direction: column;
+                gap: 22px;
+                align-items: center;
+            }
+            .timevol{
+                gap: 10px;
+                display: flex;
+                justify-content: space-evenly;
+                align-self: center;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex">
+        <div class="left">
+            <div class="close">
+                <img width="30" class="invert" src="cross.svg" alt="">
+            </div>
+            <div class="home grey round m-1 p-1">
+                <div class="logo">
+                    <img width="200px" class="invert"src="logo1.svg" alt="">
+                </div>
+                <ul>
+                    <li><img  class="invert"src="home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+          
+            <div class="library  round  m-1 grey p-1">
+                <div class="heading">
+                    <img class="invert"src="your.svg"alt="">
+                    <h2>
+                        your library
+                    </h2>
+                </div>
+                <div class="songlist">
+                    <div class="" class="songinfo">
+
+                        <ul>
+                            <li>
+                               <img class="invert" src="music.svg" alt="">
+                               <div class="info">
+                                    <div>Thoda Galat. </div>
+                                    <div>Jubin Nautiyal, Shashwat Sachdev.</div>
+                               </div>
+                               <div class="playnow">
+                                    <span>play now</span>
+                                    <img class="invert"src="play.svg" alt="">
+                               </div>
+                            </li>
+                            <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div> Soulmate.</div>
+                                     <div>Badshah, Arijit Singh.</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div>Haan Ke Haan. </div>
+                                     <div>Sohail Sen, Monali Thakur, Kausar Munir.</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div>Ishq</div>
+                                     <div>Faheem Abdullah, Rauhan Malik</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div>Sajni</div>
+                                     <div>Arijit Singh</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div> Dill</div>
+                                     <div>Senaz Alli</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div> Kati Patang</div>
+                                     <div>AR Rehaman</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div> Kaho Na Kaho </div>
+                                     <div>Ajmeri</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div> Malang </div>
+                                     <div>Arijit Singh</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                             <li>
+                                <img class="invert" src="music.svg" alt="">
+                                <div class="info">
+                                     <div>Subha Shaam </div>
+                                     <div>jeeta</div>
+                                </div>
+                                <div class="playnow">
+                                     <span>play now</span>
+                                     <img class="invert"src="play.svg" alt="">
+                                </div>
+                             </li>
+                        </ul>
+                    </div>
+                </div>
+        
+        
+                
+                    
+            
+                   
+              
+
+                <div class="footer">
+                    <div>
+                      <a href="https://www.spotify.com/in-en/legal/" id="" data-encore-id="textLink">
+                        <span data-encore-id="type">Legal</span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://www.spotify.com/in-en/safetyandprivacy/" id="" data-encore-id="textLink">
+                        <span data-encore-id="type">Safety </span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="" data-encore-id="textLink">
+                        <span data-encore-id="type">Privacy </span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="" data-encore-id="textLink">
+                        <span data-encore-id="type">Cookies</span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="" data-encore-id="textLink">
+                        <span data-encore-id="type">About Ads</span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://www.spotify.com/in-en/accessibility/" id="" data-encore-id="textLink">
+                        <span data-encore-id="type">Accessibility</span>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+       
+    
+          
+        <div class="right grey round border">
+           <div class="header">
+                <div class="nav">
+                    <div class="hamcontainer">
+                        <img width="50" class="invert " src="ham.svg" alt="">
+                        
+
+                        <img class="invert"src="left.svg" alt="">
+                        <img class="invert"src="right.svg" alt="">
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="b1">Signup</button>
+                    <button class="b2">Log in</button>
+                </div>
+           </div>
+           <div class="spoty">
+                <h1>spotify plays</h1>
+                <div class="cardcontiner">
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f000000020408713c731caaf1f800615a" alt="">
+                        <h2>Chill Hits!</h2>
+                        <p>Hits to boost your moood and fill you with happiness!</p>
+                        
+                    </div>
+
+                    <div data-floader="ncs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d0000b273fe7698d03ca4b2be0c6c3594" alt="">
+                        <h2> Welcome Back!</h2>
+                        <p>Darling, you send me.!</p>
+                        
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://c.saavncdn.com/932/Path-of-Love-Romantic-Piano-Music-Candlelight-Dinner-for-Two-Engagement-Background-Music-Piano-Bar-Cocktail-Part-Dinner-Time-V-Day-Music-Valentines-Music-English-2015-500x500.jpg" alt="">
+                        <h2>Cute Song Lyrics!</h2>
+                        <p>Born For Loving You!</p>
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f00000002e7054ae63005ea1001584690" alt="">
+                        <h2>Night Out!</h2>
+                        <p>Lacy, oh Lacy, skin like puff pastry.!</p>
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f000000022700584218ac0f580f5410fc" alt="">
+                        <h2>Outfit Pics!</h2>
+                        <p>Baby, you can find me under the lights, diamonds under my eyes!</p>
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67656300005f1f9f5d8dab58a909ef23fee583" alt="">
+                        <h2>Country Song !</h2>
+                        <p>You haven't seen the best of me!</p>
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67656300005f1f099a357ed0a2a39424f2903d" alt="">
+                        <h2>Lyrics for Travel!</h2>
+                        <p>This is a drop everything kind of thing!</p>
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f00000002d6710ea346fec48e89d77dba" alt="">
+                        <h2>Lyrics for Anniversary!</h2>
+                        <p>It's my party and I'll cry if I want to!</p>
+                    </div>
+                    <div data-floader="cs" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                            <path d="M8 5v14l11-7z" fill="#000"/>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000291b4de873c02ce48d2cf31dc" alt="">
+                        <h2> Lyrics for Birthday !</h2>
+                        <p>Truckin' — got my chips cashed in!</p>
+                    </div>
+
+                    <div class="playbar">
+                        <div class="seek">
+                            <div class="circle">
+
+                            </div>
+                        </div>
+                        <div class="abovebar">
+
+                       
+                            <div class="songinfo">
+                                
+                            </div>
+                            <div class="songbtn">
+                                <img width="35" id="previosu" src="prevsong.svg" alt="">
+                                <img width="35"  id="play" src="play.svg" alt="">
+                                <img width="35"  id="next" src="next.svg" alt="">
+                            </div>
+                            <div class="timevol">
+
+                            </div>
+                            <div class="songtime">
+                            </div>
+                                <div class="volume">
+                                    <img width="20" src="volume.svg" alt="">
+
+                                    <div class="range">
+                                        <input 
+                                        type="range" name="volume" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+  
+<!-- <script src="spotify.js"></script> -->
+</body>
+</html>

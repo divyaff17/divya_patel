@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+       .main{
+        background-image: url("assets/images/bg.jpg");
+        height: 80vh;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size:max(1100px,100vw);
+        opacity: 0.8;
+    
+       }
+       .main .box{
+            height: 80vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top:0;
+       }
+       nav{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              max-width:60vw;
+              margin: auto;
+              height: 75px;
+              
+            
+       }
+       nav img{
+            width: 185px;
+            position: relative;
+            z-index: 20;
+       }
+       .btn{
+        position: relative;
+        z-index: 20;
+        padding:3px 8px;
+        background-color:rgba(248,243,243,0.021);
+        border-radius: 4px;
+        color: aliceblue;
+        border: 1px solid white;
+        cursor: pointer;
+        font-weight: 400;
+       
+       }
+       .btnred{
+        position: relative;
+        z-index: 20;
+        padding:3px 8px;
+        font-weight: 400;
+        background-color: rgb(252, 2, 2);
+        border-radius: 4px;
+        color: aliceblue;
+        border: 1px solid white;
+       }
+       .text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        width: 60%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        flex-direction: column;
+        display: flex;
+        gap:33px;
+        padding:0px 30px;
+        
+       }
+       .txt{
+        text-align: center;
+        font-size: 35px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       }
+       .txt2{
+        text-align: center;
+        font-size: 35px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .area{
+            width: 35%;
+            height: 50px;
+            border-radius:5px;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 19px;
+            background-color: rgb(6, 0, 0);
+            border-color: aliceblue;
+            opacity: 0.68;
+            color: rgb(246, 247, 248);
+            padding: 3px 24px;
+            font-weight: 500;
+          
+        }
+        .start{
+            width: 200px;
+            height: 60px;
+            border-radius: 5px;
+            border:none;
+            font-size: 25px;
+            background-color: red;
+            color: white;
+            border-color: aliceblue;
+            padding: 10px 0px;
+            font-weight: 400;
+        }
+        .separation{
+            height: 7px;
+            background-color: gray;
+        }
+        .first{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            max-width: 70vw;
+            color: aliceblue;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 1300px) {
+          
+           .first{
+            flex-wrap: wrap;
+           }
+           nav{
+            max-width: 90vw;
+           }
+            
+        }
+        .secimg img{
+            width: 555px;
+            position: relative;
+            z-index: 20;
+           
+            
+        }
+        .secimg{
+            position:relative;
+        }
+        .secimg video{
+            position:absolute;
+            top:51px;
+            right:0;
+            width:555px;
+            
+        }
+        .first div samp {
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 12px 0;
+        }
+        .first > div :nth-child(2) {
+            font-size: 25px;
+           
+        }
+        .sec2img img{
+            width: 40vw;
+            position: relative;
+            z-index: 20;
+            padding: 10px 0px 0px 100px;
+            
+        }
+        .sec2img{
+            position:relative;
+        }
+        .sec2img video{
+            position: absolute;
+            left: 0;
+            width: 450px;
+            padding-top:40px;
+            margin: 10px 0px 0px 210px;
+            overflow: hidden;
+
+        }
+       
+        .firstsec{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            max-width: 100vw;
+            color: aliceblue;
+            align-items: center;
+        }
+        @media screen and (max-width: 1300px) {
+          
+          .firstsec{
+           flex-wrap: wrap;
+          }
+          .footer{
+            max-width: 90vw;
+          }
+          .footer-item{
+            justify-content: center;
+            align-items: center;
+          }
+          .start{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+          }
+
+        }
+        
+        .firstsec > div :nth-child(2) {
+            font-size: 20px;
+        }
+        .firstsec div samp {
+            font-size: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+         .box1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: aliceblue;
+            box-sizing: border-box;
+            background-color:rgb(80, 79, 79);
+            height: 50px;
+            padding:45px;
+            max-width: 75vw;
+            opacity: 0.7;
+            margin:12px auto;
+            font-size: 25px;
+            color: aliceblue;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+           
+        }
+        .box1:hover{
+            background-color: gray;
+
+        }
+        .statements h2{
+            color: aliceblue;
+            text-align: center;
+            font-size: 48px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 60px 0px;
+            font-weight: 900;
+        }
+        .box svg{
+            width: 50px;
+            height: 100px;
+            color: aliceblue;
+        }
+        .last{
+            font-size: 25px;
+            color: aliceblue;
+            text-align: center;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding:  26px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       .area1{
+            align-items: center;
+            justify-content: center;
+            margin:0px 0px 2% 590px ;
+            width: 15%;
+            height: 30px;
+            border-radius:5px;
+            border: 2px solid white;
+            padding: 1em;
+            background-color: black;
+            display:inline-block;
+       }
+       .start1{
+        
+            width: 10%;
+            height: 55px;
+            border-radius:5px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            display:inline-block;
+       }
+       footer{
+        color: aliceblue;
+        min-width: 60vw;
+        margin: auto;
+        padding: 14px;
+       }
+       footer div{
+        padding:25px 0px 0px 100px;
+        margin:  10px ;
+        font-size: 19px;
+       }
+       
+       .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: aliceblue;
+        
+       }
+       @media screen and (max-width: 1300px) {
+          
+          .footer{
+           flex-wrap: wrap;
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           gap: 20px;
+          
+          }
+        }
+       .footer-item{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+       
+       }
+       .footer a{
+        font-size: 16px;
+        color: aliceblue;
+        padding: 10px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+    </style>
+</head>
+<body>
+   <div class="main">
+        <nav >
+            <samp><img width="200" src="assets/images/images.svg" alt=""></samp>
+            <div>
+                <button class="btn">English</button>
+                <button class="btnred">Sign IN</button>
+            </div>
+    </div>   
+        </nav>
+       <div class="box">  
+        
+        </div>
+        
+       <div class="text">
+            <samp> <b>Unlimited movies,TV shows and more </b></samp>
+            <samp class="txt">Watch anywhere. Cancel anytime.</samp>
+            <spam class="txt2">Ready to watch? Enter your email to create or restart your membership.</spam>
+            <div>
+                <input class="area" type="text" placeholder="Email address">
+                <button class="start">Get Started &gt;</button>    
+            </div>
+            
+       </div>
+
+       <div class="separation"></div>
+    
+    <section class="first">
+        <div>
+         <samp><b>Enjoy on your TV</b></samp> 
+         <samp>watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</samp>
+        </div>
+        <div class="secimg">
+            <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
+            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" autoplay loop muted></video>
+        </div>
+       
+    </section>
+    <div class="separation"></div>
+
+    <section class="first">
+        
+        <div class="secimg">
+            <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg">
+        </div>
+        <div>
+            <samp><b>Download your shows to watch offline</b></samp> 
+            <samp>Save your favourites easily and always have something to watch.</samp>
+           </div>
+       
+    </section>
+    <div class="separation"></div>
+
+    <section class="firstsec">
+        <div>
+         <samp><b>Watch everywhere</b></samp> 
+         <samp>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</samp>
+        </div>
+        <div class="sec2img">
+            <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png">
+            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" autoplay loop muted></video>
+        </div>
+       
+    </section>
+    <div class="separation"></div>
+
+    <section class="first">
+        
+        <div class="secimg">
+            <img alt="" src="https://occ-0-3061-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d">
+        </div>
+        <div>
+            <samp><b>Create profiles for kids</b></samp> 
+            <samp>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</samp>
+           </div>
+       
+    </section>
+    <div class="separation"></div>
+
+    <section class="statements">
+        <h2>Frequently Asked Questions</h2>
+        <div class="box1">
+            <samp>What is Netflix</samp>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="50" color="white" fill="none">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box1">
+            <samp>How much does Netflix cost?</samp>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="50" color="white" fill="none">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box1">
+            <samp>Where can I Watch?</samp>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="50" color="white" fill="none">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box1">
+            <samp>How do I cancle?</samp>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="50" color="white" fill="none">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box1">
+            <samp>What can I watch on Netflix?</samp>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="50" color="white" fill="none">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box1">
+            <samp>Is Netflix good for kids?</samp>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="50" color="white" fill="none">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <span class="last">Ready to watch? Enter your email to create or restart your membership.</span>
+        <div>
+            <input class="area1" type="text" placeholder="Email address">
+            <button class="start1">Get Started &gt;</button>    
+        </div>
+        
+    </section>
+    <div class="separation"></div>
+
+    <footer>
+       
+    <div>Questions? call 000-800-919-1694</div>
+        <div class="footer">
+            <div class="footer-item">
+                <a href="faq">FAQ</a>
+                <a href="faq">Invester relation</a>
+                <a href="faq">Privacy</a>
+                <a href="faq">speed test</a>
+                <a href="faq"><button class="btn">English</button></a>
+                <a href="faq">Netflix India</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="faq">Helpline center</a>
+                <a href="faq">Job</a>
+                <a href="faq">cookie preference</a>
+                <a href="faq">legend Notice</a>
+               
+            </div>
+
+            <div class="footer-item">
+                <a href="faq">Account</a>
+                <a href="faq">way to watch</a>
+                <a href="faq">coparative information</a>
+                <a href="faq">only a Netflix</a>
+                
+            </div>
+
+            <div class="footer-item">
+                <a href="faq">Media center</a>
+                <a href="faq">Term  of Use</a>
+                <a href="faq">Contact Us</a>
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

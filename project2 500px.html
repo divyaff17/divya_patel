@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .logo{
+            display:inline-block;
+            width: 90px;
+            height: 50px;
+            margin: 50px 0px 0px 50px;
+            
+          
+
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            background-color: #fbf9f9;
+            position: fixed;
+            width: 100%;
+            height: 100px;
+        }
+        ul li{
+            display: inline;
+            list-style: none;
+            padding: 30px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+        
+            
+            
+        }
+        .txt{
+            width: 10px;
+            height: 30px;
+            padding: 5px;
+            font-size: 19px;
+            color: #000000;
+            font-weight: bold;
+            
+        }
+      
+        .dp{
+            border-radius: 40px;
+            height: 50px;
+            width: 220px;
+            font-size: medium;
+            cursor: pointer;
+        }
+        .img{
+            background-image: url("assets/images/pug.jpg");
+            height: 108vh;
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size:max(1795px,60vw);
+            
+        }
+        .txt1{
+
+            color: #fbf9f9;
+            padding: 200px;
+            margin: 0px 0px 0px -160px;
+            font-size: 85px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            max-width: 140vh;
+            
+        }
+        .img span{
+            color: rgb(254, 254, 253);
+            display: flex;
+            justify-content: space-between;
+            padding:0px 0px 0px 230px;
+            margin: -190px ;
+            max-width: 670px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+        }
+        .img div button{
+            
+            height: 50px; 
+            width: 200px;
+            font-size: 25px;
+            font-weight: bold;
+            padding:auto;
+            margin:210px 40px;
+            border-radius: 50px;
+            border: #fcfafa;
+        }
+        .img div button:hover{
+            background: #dfdcdc;
+        }
+        .txt2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:0px 0px 0px 160px;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .txt3{
+            padding-left: 160px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .txt3 button{
+            font-size: 20px;
+            font-weight: bold;
+            height: 60px;
+            width: 420px;
+            border-radius: 30px;
+            margin:-30px 30px 0px 260px;
+            display: inline;
+            border: #dfdcdc;
+            background-color: rgb(255, 221, 102);
+        }
+        .separation{
+            
+            height: 1px;
+            background-color: gray;
+            margin:100px auto;
+            width: 1400px;
+           
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+        .svg{
+            display: flex;
+            gap: 300px;
+            justify-content: center;
+            padding: 100px;
+        }
+        .contant{
+            display: flex;
+            gap: 90px;
+            justify-content: center;
+            padding:-10px;
+            margin: -50px;
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .contant2{
+            display: flex;
+            justify-content: center;
+            font-size: 10px;
+            gap: 80px;
+            padding:10px;
+            margin: 60px 0px 0px 90px;
+            font-size: 19px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .yimg{
+          background-image: url("assets/images/2.jpg");
+          height: 83vh;
+          width: 90vh;
+          max-width:(0px,10vh);
+          background-repeat: no-repeat;
+          align-items: center;
+          margin: 100px 0px 0px 900px;
+          object-fit: cover;
+          
+            
+        }
+        .component{
+           
+            color: rgb(6, 6, 0);
+            padding:0px 0px 0px 630px;
+            margin: -500px ;
+            max-width: 670px;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn{
+            
+            width: 280px;
+            height: 100px;
+            border-radius: 10px;
+            border:none;
+            font-size: 20px;
+            background-color: rgb(7, 0, 0);
+            color: white;
+            border-color: rgb(0, 4, 7);
+            padding: 10px -10px;
+            margin: 10px;
+        
+        }
+        .btn:hover{
+            background-color: rgb(43, 42, 42);
+        }
+        .back{
+            background-image: url("assets/images/bga2.jpg");
+            height:340px;
+            width: 105%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 670px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:max(1795px,100vw);
+           
+        }
+        .back svg{
+            height: 80px;
+            width: 80px;
+            background-color: aqua;
+            border-radius: 50%;
+            padding: 10px;
+        }
+       .back p{
+        margin: 0px 0px 0px -250px;
+        padding: 200px 0px 0px 10px;
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       .f{
+        display: flex;
+        justify-content: space-around;
+        margin: -30px 0px 0px 1300px;
+        color: #dfdcdc;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+       }
+       .middle h1{
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        
+       }
+       .middle p{
+        display: flex;
+        justify-content: center;
+        margin: -40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
+    
+       }
+       .view button{
+        display: flex;
+        justify-content: center;
+        height: 60px; 
+        width: 300px;
+        padding: 12px;
+        font-size: 28px;
+        font-weight: bold;
+        margin:60px 0px 0px 680px;
+        border-radius: 50px;
+        border: none;
+        background-color:rgb(34,34,34);
+        color: #fbf9f9;
+        
+       }
+       .image{
+        background-image: url("assets/images/1.jpg");
+        height: 60vh;
+        width: 25%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-width: 294px;
+        margin:44px 0px 0px 200px;
+        
+        }
+        .image1{
+            background-image: url("assets/images/22.jpg");
+            height: 80vh;
+            width: 25%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-width: 294px;
+            margin:-460px 0px 0px 650px;
+
+        }
+       
+        .image2{
+            background-image: url("assets/images/33.jpg");
+            height: 80vh;
+            width: 25%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin:-620px 0px 0px 1100px;
+        }
+        .image3{
+            background-image: url("assets/images/44.jpg");
+            height: 100vh;
+            width: 25%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin:-130px 0px 0px 200px;
+        }
+        .image4{
+            background-image: url("assets/images/55.jpg");
+            height: 50vh;
+            width: 66%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin:-600px 0px 0px 470px;
+        }
+        .image5{
+            background-image: url("assets/images/66.jpg");
+            margin:-70px 0px 0px 319px;
+            height: 50vh;
+            width: 56%;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+        }
+        .image6{
+            background-image: url("assets/images/77.jpg");
+            height: 27vh;
+            width: 43%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin:-300px 0px 0px 950px;
+        }
+        .mount{
+            background-image: url("assets/images/mountain.jpg");
+            height:340px;
+            width: 105%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 80px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:max(1795px,100vw);
+        }
+        .mount svg{
+            height: 80px;
+            width: 80px;
+            background-color:rgb(69,69,124);
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0px 0px 0px -120px;
+        }
+        .mount p{
+            margin: 0px 0px 0px -190px;
+            padding: 200px 0px 0px 10px;
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .comp{
+            background-image: url("assets/images/c2.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 80vh;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 40px 0px 0px 200px;
+
+        }
+        .girl{
+            background-image: url("assets/images/g.jpg");
+            height:340px;
+            width: 105%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 80px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:max(1795px,100vw);
+        }
+        .girl svg{
+            height: 90px;
+            width: 90px;
+          
+            background-color:rgb(228, 64, 89);
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0px 0px 0px -120px;
+        }   
+        .girl p{
+            margin: 0px 0px 0px -160px;
+            padding: 200px 0px 0px 10px;
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .red{
+            background-image: url("assets/images/red.jpg");
+            height: 80vh;
+            width: 50%;
+            max-width:(0px,10vh);
+            background-repeat: no-repeat;
+            align-items: center;
+            margin: 100px 0px 0px 700px;
+            object-fit: cover;
+          
+        }
+        .red svg{
+           
+            margin: 170px 0px 0px -600px ;
+        }
+        .divya h1{
+            margin: 10px 0px 0px -620px;
+            font-size: 45px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .divya p{
+            font-size: 20px;
+            margin: 10px 0px 0px -620px;
+            max-width: 80vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .divya button{
+            height: 70px; 
+            width: 250px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #dfdcdc;
+            margin:30px 0px 0px -600px;
+            border-radius: 50px;
+            background-color: rgb(6, 0, 0);
+         }    
+         .base{
+            background-image: url("assets/images/base.jpg");
+            height:340px;
+            width: 105%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 100px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:max(1795px,100vw);
+            
+        }
+        .base svg{
+            height: 100px;
+            width: 100px;
+          
+            background-color:rgb(254, 223, 70);
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0px 0px 0px -120px;
+        }   
+        .base p{
+            margin: 0px 0px 0px -190px;
+            padding: 200px 0px 0px 10px;
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .class{
+            background-image: url("assets/images/divya.jpg");
+            height:90vh;
+            width: 50%;
+            background-repeat: no-repeat;
+            margin: 80px 0px 0px 100px;
+          
+    
+        }
+        .class svg{
+           
+            margin: 100px 0px 0px 900px ;
+            
+        }
+        .class1 h1{
+           
+            margin: 30px 0px 0px 900px;
+            padding-left: 100px 0px 0xp 10px; 
+            font-size: 55px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .class1 p{
+            font-size: 30px;
+            margin: 40px -526px -342px 899px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .class1 button{
+            height: 70px; 
+            width: 250px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #dfdcdc;
+            margin:360px 0px 0px 900px;
+            border-radius: 50px;
+            background-color: rgb(6, 0, 0);
+         }    
+         .bottom{
+            margin: 0px 0px 0px 100px;
+            color:solid grey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+         }
+         .bottom:hover{
+            background-color: rgb(208, 210, 210);
+         }
+         .box1{
+            height:340px;
+            width: 105%;
+            background-color: rgb(69,69,124);
+            margin: 80px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:max(1795px,100vw);
+         }
+         .box1 h1{
+          color: white;
+          margin: -50px 0px 0px -200px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: bold;
+          font-size: 50px;
+         }
+         .box1 p{
+            margin: 0px 0px 0px -900px;
+            padding: 50px 0px 0px 10px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+         .box1 button{
+            height: 70px; 
+            width: 250px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #040000;
+            margin:200px 0px 0px -900px;
+            border-radius: 50px;
+            background-color: rgb(250, 250, 250);
+         }
+         footer{
+        color: rgb(143, 142, 142);
+        min-width: 60vw;
+        margin: auto;
+        padding: 14px;
+       }
+       footer div{
+        padding:25px 0px 0px 100px;
+        margin:  10px ;
+        font-size: 20px;
+       }
+       
+       .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color:rgb(143, 142, 142);
+}
+
+
+        
+       
+       .footer-item{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+       
+       }
+       .footer a{
+        text-decoration: none;
+        font-size: 20px;
+        color:rgb(143, 142, 142);
+        padding: 10px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       h3{
+        
+        margin:-103px 0px 0px 130px;
+        padding: 20px 0px 0px 10px;
+        color: rgb(143, 142, 142);
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 50px;
+       }
+       .last{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        margin: -40px 0px 0px 1000px;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(81, 81, 81);
+       }
+
+ </style>
+</head>
+<body>
+    <nav class="box">
+        <ul>
+            <span class="logo"><svg  data-name="Logo SVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 20"><title>500px</title><path d="M24.83,0a10,10,0,1,0,10,10h0A10.09,10.09,0,0,0,24.83,0Zm0,17.9a7.85,7.85,0,1,1,7.8-7.9h0A7.9,7.9,0,0,1,24.83,17.9ZM46.32,0a10,10,0,1,0,10,10h0A10,10,0,0,0,46.32,0Zm0,17.9a7.85,7.85,0,1,1,7.8-7.9h0A7.77,7.77,0,0,1,46.32,17.9ZM7.63,6a6.74,6.74,0,0,0-5.3,1.4V2.1h9c0.3,0,.5-0.1.5-1s-0.4-.9-0.6-0.9H1.33a0.9,0.9,0,0,0-.9.9V9.9c0,0.5.3,0.6,0.8,0.7a0.76,0.76,0,0,0,.9-0.2h0a5.69,5.69,0,0,1,5-2.4,5.2,5.2,0,0,1,4.5,4.4A5.06,5.06,0,0,1,7.23,18H6.63a5.1,5.1,0,0,1-4.7-3.3c-0.1-.3-0.3-0.5-1.1-0.2s-0.9.5-.8,0.8a7.09,7.09,0,0,0,9,4.2,7.09,7.09,0,0,0,4.2-9A7,7,0,0,0,7.63,6ZM63.12,0.1a5.42,5.42,0,0,0-4.8,5.4v8.9c0,0.5.4,0.6,1,.6s1-.1,1-0.6V5.5a3.36,3.36,0,0,1,2.9-3.4,3.29,3.29,0,0,1,2.5.8,3.19,3.19,0,0,1,1.1,2.4,4,4,0,0,1-.7,1.9,3.15,3.15,0,0,1-2.8,1.3h0c-0.4,0-.7,0-0.8.9,0,0.6,0,.9.5,1a4.92,4.92,0,0,0,2.9-.6,5.37,5.37,0,0,0,2.9-4.2A5.18,5.18,0,0,0,64,0,2.77,2.77,0,0,1,63.12.1Zm13.1,5.2,3.6-3.6c0.1-.1.4-0.4-0.2-1.1a1,1,0,0,0-.7-0.4h0a0.52,0.52,0,0,0-.4.2L74.92,4l-3.6-3.7c-0.3-.3-0.6-0.2-1.1.2s-0.5.8-.2,1.1l3.6,3.6L70,8.9h0a0.76,0.76,0,0,0-.2.4,0.84,0.84,0,0,0,.4.7,1.61,1.61,0,0,0,.7.4h0a1.06,1.06,0,0,0,.5-0.2L75,6.6l3.6,3.6a0.52,0.52,0,0,0,.4.2h0a1,1,0,0,0,.7-0.4c0.3-.4.4-0.8,0.1-1Z" transform="translate(0)"></path></svg></span>
+            <li>Discover</li>
+            <li>Licensing<svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/></svg>
+            </li>
+            <li>Memberships</li>
+            <li>Quests</li>
+            <li>Blog</li>
+            <li>Award Winners</li>
+        <li style="margin: 10px 0px 0px 80px;">
+            <li class="txt"><input class="dp" type="text" placeholder="Search powered by AI"><svg width="28" height="12" viewBox="0 0 28 12" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M8.31152 11H6.20605L2.09082 3.84277V11H0.128906V0.923828H2.33691L6.34961 7.95801V0.923828H8.31152V11ZM16.501 8.8125C16.4508 9.25456 16.2207 9.70345 15.8105 10.1592C15.1725 10.8838 14.2793 11.2461 13.1309 11.2461C12.1829 11.2461 11.3467 10.9408 10.6221 10.3301C9.89746 9.7194 9.53516 8.72591 9.53516 7.34961C9.53516 6.0599 9.861 5.07096 10.5127 4.38281C11.1689 3.69466 12.0189 3.35059 13.0625 3.35059C13.6823 3.35059 14.2406 3.4668 14.7373 3.69922C15.234 3.93164 15.6442 4.2985 15.9678 4.7998C16.2594 5.24186 16.4486 5.75456 16.5352 6.33789C16.5853 6.67969 16.6058 7.17188 16.5967 7.81445H11.4971C11.5244 8.56185 11.7591 9.08594 12.2012 9.38672C12.4701 9.57357 12.7936 9.66699 13.1719 9.66699C13.5729 9.66699 13.8988 9.55306 14.1494 9.3252C14.2861 9.20215 14.4069 9.03125 14.5117 8.8125H16.501ZM14.5732 6.5293C14.5413 6.01432 14.3841 5.62467 14.1016 5.36035C13.8236 5.09147 13.4772 4.95703 13.0625 4.95703C12.6113 4.95703 12.2604 5.09831 12.0098 5.38086C11.7637 5.66341 11.6087 6.04622 11.5449 6.5293H14.5732ZM23.5693 11L22.4004 5.57227L21.2178 11H19.1943L17.1025 3.54883H19.1943L20.3564 8.89453L21.4297 3.54883H23.4053L24.54 8.91504L25.7021 3.54883H27.7324L25.5723 11H23.5693Z" fill="url(#paint0_linear_14562_26123__9x45rfjg)"></path><defs><linearGradient id="paint0_linear_14562_26123__9x45rfjg" x1="28" y1="-4" x2="-2.17675" y2="8.05407" gradientUnits="userSpaceOnUse"><stop stop-color="#6DFF8D"></stop><stop offset="0.5" stop-color="#FFF972"></stop><stop offset="1" stop-color="#58EBFF"></stop></linearGradient></defs></svg></li>
+        </li>
+            <li class="txt">Log in</li>
+            <li><button style="border-radius: 20px; height: 30px; width: 85px; font-size: 15px;font-weight: bold;">Sign up</button></li>
+        </ul>
+    </nav>
+
+    <div class="img">
+        <h1 class="txt1">Discover and share the world's best photos</h1>
+        
+        <span>Get inspired with incredible photos from diverse styles and genres around the world. We're not guided by fads—just great photography.</span>
+        <div><button>Sign up</button></div>
+    </div>
+
+    <div class="txt2">
+        Looking for inspiration?
+        
+    </div>
+    <p class="txt3">Get started by customizing your content feed and uncover endless inspiration.
+    <button>Get your recommendations &gt;</button>
+    </p>
+    <div class="separation"></div>
+    <h1 class="main">What makes us different</h1>
+    <div class="svg">
+    <svg width="74" height="74" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0__dZpnqxFd)"><path d="M23.8001 1.80001C23.7001 1.60001 23.5001 1.40001 23.3001 1.30001C21.0001 0.700013 18.6001 1.30001 17.0001 3.00001C15.4001 4.60001 14.8001 7.00001 15.3001 9.20001V18.6C15.3001 19 15.6001 19.3 16.0001 19.3C16.4001 19.3 16.7001 19 16.7001 18.6V9.90001C17.0001 9.90001 17.2001 10 17.5001 10C19.2001 10 20.9001 9.30001 22.1001 8.10001C23.7001 6.40001 24.4001 4.00001 23.8001 1.80001ZM21.1001 7.10001C20.1001 8.10001 18.8001 8.60001 17.5001 8.60001L20.5001 5.60001C20.8001 5.30001 20.8001 4.90001 20.5001 4.60001C20.2001 4.30001 19.8001 4.30001 19.5001 4.60001L16.5001 7.60001C16.5001 6.30001 17.0001 5.00001 18.0001 4.00001C19.2001 2.80001 20.9001 2.30001 22.5001 2.60001C22.8001 4.20001 22.3001 5.90001 21.1001 7.10001Z" fill="#222222"></path><path d="M10.0001 2.7C7.60006 0.399999 4.10006 -0.500001 0.80006 0.299999C0.60006 0.399999 0.40006 0.599999 0.30006 0.799999C-0.49994 4.1 0.40006 7.6 2.70006 10C4.50006 11.8 6.90006 12.7 9.40006 12.7C9.90006 12.7 10.4001 12.6 11.0001 12.6V23.3C11.0001 23.7 11.3001 24 11.7001 24C12.1001 24 12.4001 23.7 12.4001 23.3V11.8C13.2001 8.5 12.3001 5.1 10.0001 2.7ZM3.70006 9C1.80006 7 1.00006 4.3 1.60006 1.6C4.30006 0.999999 7.00006 1.8 9.00006 3.7C10.7001 5.4 11.5001 7.8 11.3001 10.2L6.30006 5.5C6.00006 5.2 5.60006 5.2 5.30006 5.5C5.00006 5.8 5.00006 6.3 5.30006 6.5L10.2001 11.2C7.80006 11.5 5.50006 10.7 3.70006 9Z" fill="#222222"></path></g><defs><clipPath id="clip0__dZpnqxFd"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg></svg>
+
+    <svg width="74" height="74" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_15900:42041__uR9lTnZJ" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24" style="mask-type: alpha;"><path d="M0 6.10352e-05H24V24.0001H0V6.10352e-05Z" fill="white"></path></mask><g mask="url(#mask0_15900:42041__uR9lTnZJ)"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.16056 22.3225L1.68357 18.8576L2.77004 17.7749L4.24982 19.2481C4.3851 19.3843 4.56362 19.4524 4.74215 19.4524C4.92067 19.4524 5.09919 19.3843 5.23587 19.2481C5.50784 18.9771 5.50784 18.5365 5.23587 18.2655L3.75609 16.7922L4.74215 15.8082L5.23587 16.3002C5.37116 16.4364 5.54968 16.5031 5.7282 16.5031C5.90672 16.5031 6.08524 16.4364 6.22192 16.3002C6.49389 16.0292 6.49389 15.5886 6.22192 15.3176L5.7282 14.8256L6.71425 13.8429L7.20937 14.3349C7.34466 14.4712 7.52318 14.5379 7.7017 14.5379C7.88022 14.5379 8.05874 14.4712 8.19542 14.3349C8.46739 14.0639 8.46739 13.6233 8.19542 13.3523L7.7003 12.8603L7.99877 12.5643L11.4758 16.0292L5.16056 22.3225ZM6.06153 6.7032L18.0629 18.6602L17.0755 19.6428L5.07548 7.68584L6.06153 6.7032ZM2.29305 1.96516C2.69891 1.56071 3.23169 1.35917 3.76307 1.35917C4.29584 1.35917 4.82862 1.56071 5.23447 1.96516L7.04061 3.76225L4.09919 6.69347L2.29305 4.89499C1.48273 4.08609 1.48273 2.77267 2.29305 1.96516ZM18.5497 2.04994L22.0267 5.51348L16.406 11.116L13.8746 8.59203C13.9611 8.55728 14.042 8.50725 14.1117 8.43775C14.3837 8.16534 14.3837 7.72614 14.1117 7.45512L13.618 6.96311L14.6041 5.98047L15.0978 6.47249C15.2345 6.6073 15.413 6.67541 15.5915 6.67541C15.7686 6.67541 15.9472 6.6073 16.0838 6.47249C16.3558 6.20007 16.3558 5.76088 16.0838 5.48985L15.5915 4.99784L16.5776 4.01521L18.056 5.48985C18.1926 5.62467 18.3712 5.69277 18.5497 5.69277C18.7282 5.69277 18.9053 5.62467 19.042 5.48985C19.314 5.21744 19.314 4.77824 19.042 4.50722L17.5636 3.03257L18.5497 2.04994ZM19.5399 19.1536C19.5413 19.1522 19.5427 19.1522 19.5427 19.1522C19.5427 19.1522 19.5441 19.1508 19.5441 19.1494L20.7421 17.9555L21.4395 19.8527L20.2442 21.0424L18.3405 20.3475L19.5399 19.1536ZM11.4493 8.14032C11.4507 8.14032 11.4507 8.14171 11.4507 8.14171H11.452L15.9123 12.5865C15.9123 12.5879 15.9123 12.5879 15.9137 12.5893C15.9151 12.5907 15.9151 12.5907 15.9165 12.5907L20.035 16.6949L19.049 17.6776L7.04898 5.72057L8.03503 4.73793L11.4493 8.14032ZM23.9583 22.6616L21.6766 16.4559C21.6752 16.4517 21.671 16.4489 21.6682 16.4448C21.6348 16.3558 21.5832 16.2724 21.5148 16.2043L17.3935 12.0987L23.505 6.00549C23.6361 5.87484 23.7101 5.69833 23.7101 5.51348C23.7101 5.32863 23.6361 5.15211 23.505 5.02286L19.042 0.576681C18.77 0.304268 18.3279 0.304268 18.056 0.576681L11.943 6.66707L8.52736 3.26329C8.51202 3.24939 8.49389 3.24383 8.47855 3.23132L6.22053 0.982521C4.90672 -0.326731 2.62081 -0.328121 1.307 0.982521C-0.0458595 2.33069 -0.0458595 4.52668 1.307 5.87762L3.55944 8.11947C3.57339 8.13893 3.58036 8.16117 3.5971 8.17646L7.01272 11.5802L0.203792 18.3656C-0.0681747 18.638 -0.0681747 19.0772 0.203792 19.3482L4.66683 23.7971C4.80351 23.932 4.98203 24.0001 5.16056 24.0001C5.33908 24.0001 5.5176 23.932 5.65428 23.7971L12.4618 17.0118L16.5818 21.1175C16.6543 21.1898 16.738 21.2398 16.8258 21.2718C16.83 21.2745 16.8314 21.2773 16.8356 21.2787L23.0629 23.5539C23.141 23.5817 23.2219 23.5956 23.3028 23.5956C23.4841 23.5956 23.6626 23.5247 23.7951 23.3927C23.9876 23.2009 24.0504 22.916 23.9583 22.6616Z" fill="#222222"></path></g></svg>
+
+    <svg width="74" height="74" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.3 22.6H21.2V4.9C21.2 4.5 20.9 4.2 20.5 4.2C20.1 4.2 19.8 4.5 19.8 4.9V22.5H18.4V9.2C18.4 8.8 18.1 8.5 17.7 8.5C17.3 8.5 17 8.8 17 9.2V22.6H15.6V13.4C15.6 13 15.3 12.7 14.9 12.7C14.5 12.7 14.2 13 14.2 13.4V22.6H12.8V12C12.8 11.6 12.5 11.3 12.1 11.3C11.7 11.3 11.4 11.6 11.4 12V22.6H9.9V16.2C9.9 15.8 9.6 15.5 9.2 15.5C8.8 15.5 8.5 15.8 8.5 16.2V22.6H7.1V17.7C7.1 17.3 6.8 17 6.4 17C6 17 5.7 17.3 5.7 17.7V22.6H4.2V14.8C4.2 14.4 3.9 14.1 3.5 14.1C3.1 14.1 2.8 14.4 2.8 14.8V22.6H1.4V0.7C1.4 0.3 1.1 0 0.7 0C0.3 0 0 0.3 0 0.7V23.3C0 23.7 0.3 24 0.7 24H23.3C23.7 24 24 23.7 24 23.3C24 22.9 23.7 22.6 23.3 22.6Z" fill="#222222"></path></svg>
+
+    <svg width="74" height="74" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6.77647C24 5.64706 23.0118 4.65882 21.8824 4.65882C20.7529 4.65882 19.7647 5.64706 19.7647 6.77647C19.7647 7.48235 20.1882 8.18824 20.6118 8.47059L17.0824 12.5647L12.9882 3.95294C13.6941 3.67059 14.1176 2.96471 14.1176 2.11765C14.1176 0.988235 13.1294 0 12 0C10.8706 0 9.88235 0.988235 9.88235 2.11765C9.88235 2.96471 10.3059 3.67059 11.0118 3.95294L6.91765 12.5647L3.38824 8.61176C3.81176 8.18824 4.23529 7.48235 4.23529 6.77647C4.23529 5.64706 3.24706 4.65882 2.11765 4.65882C0.988235 4.65882 0 5.64706 0 6.77647C0 7.76471 0.705882 8.61176 1.55294 8.75294L3.95294 19.7647H3.52941C3.10588 19.7647 2.82353 20.0471 2.82353 20.4706V23.2941C2.82353 23.7176 3.10588 24 3.52941 24H20.4706C20.8941 24 21.1765 23.7176 21.1765 23.2941V20.4706C21.1765 20.0471 20.8941 19.7647 20.4706 19.7647H20.0471L22.4471 8.89412C23.2941 8.61176 24 7.76471 24 6.77647ZM21.8824 6.07059C22.3059 6.07059 22.5882 6.35294 22.5882 6.77647C22.5882 7.2 22.3059 7.48235 21.8824 7.48235C21.4588 7.48235 21.1765 7.2 21.1765 6.77647C21.1765 6.35294 21.4588 6.07059 21.8824 6.07059ZM12 1.41176C12.4235 1.41176 12.7059 1.69412 12.7059 2.11765C12.7059 2.54118 12.4235 2.82353 12 2.82353C11.5765 2.82353 11.2941 2.54118 11.2941 2.11765C11.2941 1.69412 11.5765 1.41176 12 1.41176ZM2.11765 6.07059C2.54118 6.07059 2.82353 6.49412 2.82353 6.77647C2.82353 7.05882 2.54118 7.48235 2.11765 7.48235C1.69412 7.48235 1.41176 7.2 1.41176 6.77647C1.41176 6.35294 1.69412 6.07059 2.11765 6.07059ZM19.7647 22.5882H4.23529V21.1765H4.8H19.2H19.7647V22.5882ZM18.6353 19.7647H5.36471L3.38824 10.7294L6.49412 14.2588C6.63529 14.4 6.91765 14.5412 7.05882 14.5412C7.34118 14.5412 7.48235 14.4 7.62353 14.1176L11.8588 5.08235L16.0941 14.1176C16.2353 14.4 16.3765 14.5412 16.6588 14.5412C16.9412 14.5412 17.0824 14.5412 17.2235 14.2588L20.3294 10.7294L18.6353 19.7647Z" fill="#222222"></path><path d="M12 12.7059C10.8706 12.7059 9.88232 13.6941 9.88232 14.8235C9.88232 15.9529 10.8706 16.9412 12 16.9412C13.1294 16.9412 14.1176 15.9529 14.1176 14.8235C14.1176 13.6941 13.1294 12.7059 12 12.7059ZM12 15.5294C11.5764 15.5294 11.2941 15.247 11.2941 14.8235C11.2941 14.4 11.5764 14.1176 12 14.1176C12.4235 14.1176 12.7059 14.4 12.7059 14.8235C12.7059 15.247 12.4235 15.5294 12 15.5294Z" fill="#222222"></path></svg>
+
+   
+    </div>
+
+    <div class="contant">
+       <p>Grow as a photographer</p>
+       <p>Build your career</p>
+       <p>See how you're performing
+    </p>
+       <p>Sell your work</p>
+    </div>
+
+   <div class="contant2">
+    <p>
+        Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
+    </p>
+
+    <p>
+        Market yourself as a professional photographer. Show that you're available for hire on your Profile and get discovered in Search results, showcase your articles, presents, videos..
+    </p>
+    <p>With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank in comparison to other photographers in the community.</p>
+
+    <P>
+        Earn one of the highest royalty rates in the industry when you distribute your photography through 500px to a global marketplace, where buyers can view and purchase your work for commercial usage.
+    </P>
+   </div>
+   
+    <div class="yimg"></div>
+      <div class="component">
+        <h1>Get the app</h1>  
+        <p>Join our community of over 16 million like-minded photographers. Download the 500px app for Android and iOS today!</p> 
+        <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 48 43">
+            <path fill="#42A5F5" d="M40.084,32.613c-0.848,1.835-1.254,2.655-2.342,4.274c-1.521,2.264-3.67,5.089-6.326,5.109c-2.361,0.018-2.971-1.507-6.176-1.482c-3.204,0.016-3.872,1.51-6.237,1.484c-2.654-0.022-4.688-2.568-6.21-4.826c-4.259-6.34-4.707-13.768-2.076-17.721c1.861-2.803,4.807-4.449,7.572-4.449c2.817,0,4.588,1.514,6.916,1.514c2.262,0,3.638-1.517,6.896-1.517c2.464,0,5.07,1.313,6.931,3.575C32.942,21.836,33.931,30.337,40.084,32.613z"></path><path fill="#42A5F5" d="M30.046,12.072c1.269-1.577,2.232-3.804,1.882-6.072c-2.069,0.138-4.491,1.418-5.905,3.075c-1.282,1.51-2.345,3.752-1.931,5.922C26.351,15.066,28.689,13.764,30.046,12.072z"></path><path fill="#1E88E5" d="M36.736,20.421C28,30.001,20,21.001,9.228,27.842c0.375,3.027,1.53,6.303,3.565,9.331c1.521,2.258,3.556,4.804,6.21,4.826c2.365,0.025,3.033-1.469,6.237-1.484c3.205-0.024,3.814,1.5,6.176,1.482c2.656-0.021,4.805-2.846,6.326-5.109c1.088-1.619,1.494-2.439,2.342-4.274C34.878,30.688,33.389,24.314,36.736,20.421z"></path>
+            </svg>
+            Download on the App Store</button>
+        <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 41">
+            <linearGradient id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1" x1="18.102" x2="25.297" y1="3.244" y2="34.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#35ab4a"></stop><stop offset=".297" stop-color="#31a145"></stop><stop offset=".798" stop-color="#288739"></stop><stop offset="1" stop-color="#237a33"></stop></linearGradient><path fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)" d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"></path><linearGradient id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2" x1="19.158" x2="21.194" y1="23.862" y2="66.931" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f14e5d"></stop><stop offset=".499" stop-color="#ea3d4f"></stop><stop offset="1" stop-color="#e12138"></stop></linearGradient><path fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)" d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"></path><linearGradient id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3" x1="32.943" x2="36.541" y1="14.899" y2="43.612" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd844"></stop><stop offset=".519" stop-color="#ffc63f"></stop><stop offset="1" stop-color="#ffb03a"></stop></linearGradient><path fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)" d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"></path><linearGradient id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4" x1="13.853" x2="15.572" y1="5.901" y2="42.811" gradientUnits="userSpaceOnUse"><stop offset=".003" stop-color="#0090e6"></stop><stop offset="1" stop-color="#0065a0"></stop></linearGradient><path fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)" d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"></path>
+            </svg>GET IT ON GOOGLE PLAY</button>
+
+     </div>
+
+     <div class="back">
+        <svg  width="80" height="80" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 8.70002L9.1 10.7C9.1 11 9.2 11.2 9.4 11.4C9.6 11.6 9.9 11.6 10.2 11.5L12.1 10.5L14 11.5C14.1 11.6 14.2 11.6 14.3 11.6C14.5 11.6 14.6 11.6 14.7 11.5C14.9 11.3 15 11.1 15 10.8L14.6 8.80002L16.1 7.30002C16.3 7.10002 16.4 6.80002 16.3 6.60002C16.2 6.30002 16 6.20002 15.7 6.10002L13.6 5.80002L12.6 3.90002C12.4 3.40002 11.5 3.40002 11.3 3.90002L10.3 5.80002L8.4 6.10002C8.1 6.10002 7.9 6.30002 7.8 6.60002C7.7 6.80002 7.8 7.10002 8 7.30002L9.5 8.70002ZM11.1 7.10002C11.3 7.10002 11.5 6.90002 11.6 6.70002L12.1 5.80002L12.6 6.70002C12.7 6.90002 12.9 7.10002 13.1 7.10002L14.2 7.20002L13.4 8.00002C13.2 8.20002 13.1 8.40002 13.2 8.60002L13.4 9.60002L12.4 9.10002C12.3 9.00002 12.2 9.00002 12.1 9.00002C12 9.00002 11.9 9.00002 11.8 9.10002L10.8 9.60002L11 8.60002C11 8.40002 11 8.10002 10.8 8.00002L10 7.30002L11.1 7.10002Z" fill="#222222"></path><path d="M17.7 12.6L17.9 12L19.7 10.8C20 10.6 20.1 10.3 20 10L19.3 8.00002L20 6.00002C20.1 5.70002 20 5.40002 19.7 5.20002L17.9 4.00002L17.2 2.00002C17.1 1.70002 16.8 1.50002 16.5 1.50002H14.3L12.5 0.300024C12.2 0.100024 11.9 0.100024 11.6 0.300024L9.90001 1.40002H7.70002C7.40002 1.40002 7.10002 1.60002 7.00002 1.90002L6.30002 3.90002L4.60002 5.10002C4.30002 5.30002 4.20002 5.60002 4.30002 5.90002L5.00002 7.90002L4.30002 9.90002C4.20002 10.2 4.30002 10.5 4.60002 10.7L6.40002 12L6.80002 13.3L4.10002 20.3C4.00002 20.5 4.10002 20.8 4.20002 21C4.40002 21.2 4.70002 21.3 4.90002 21.2L8.20002 20.3L10 23.1C10.1 23.3 10.4 23.4 10.6 23.4C10.6 23.4 10.6 23.4 10.7 23.4C11 23.4 11.2 23.2 11.3 22.9L11.9 21.4L12.5 23.5C12.6 23.8 12.8 24 13 24C13.1 24 13.1 24 13.2 24C13.4 24 13.6 23.9 13.8 23.7L16 21.2L19.1 22.5C19.4 22.6 19.6 22.6 19.9 22.4C20 22.2 20 22 20 21.7L17.7 12.6ZM5.90002 9.90002L6.50002 8.20002C6.50002 8.10002 6.50002 7.90002 6.50002 7.80002L5.90002 6.00002L7.40002 4.90002C7.50002 4.80002 7.60002 4.70002 7.70002 4.50002L8.30002 2.80002H10.2C10.4 2.80002 10.5 2.80002 10.6 2.70002L12.1 1.60002L13.6 2.70002C13.7 2.80002 13.9 2.80002 14 2.80002H16L16.6 4.50002C16.6 4.60002 16.7 4.80002 16.9 4.90002L18.3 6.00002L17.7 7.70002C17.7 7.80002 17.7 8.00002 17.7 8.10002L18.3 9.80002L16.8 10.9C16.7 11 16.6 11.1 16.5 11.3L16.2 12.3L16 13H14.1C13.9 13 13.8 13 13.7 13.1L12.2 14.2L10.7 13.1C10.6 13 10.4 13 10.3 13H8.30002L7.70002 11.3C7.70002 11.2 7.60002 11 7.40002 10.9L5.90002 9.90002ZM10.5 21L9.20002 19C9.10002 18.8 8.80002 18.7 8.60002 18.7C8.50002 18.7 8.50001 18.7 8.40001 18.7L6.00002 19.4L7.90002 14.5H10L11.8 15.7C12.1 15.9 12.4 15.9 12.7 15.7L10.5 21ZM15.9 19.7C15.6 19.6 15.3 19.7 15.1 19.9L13.5 21.8L12.8 19L12.9 18.6L14.6 14.4H16.5H16.6L18.2 20.6L15.9 19.7Z" fill="#222222"></path></svg>
+        <p>Editor's Choice</p>
+     </div>
+
+     <span class="f">Photo by Marta Bevacqua
+    </span>
+    <div class="middle">
+        <h1>The best of the best.</h1>
+        <p>Our editors are always on the lookout for jaw dropping content for you to discover and stay inspired. Check back weekly to see what’s new.</p>
+    </div>
+
+    <div class="view">
+        <button>View Editors' Choice</button>
+    </div>
+
+    <div class="image"></div>
+    <div class="image1"></div>
+    <div class="image2"></div>
+    <div class="image3"></div>
+    <div class="image4"></div>
+    <div class="image5"></div>
+    <div class="image6"></div>
+
+    <div class="mount">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0__WyFjXOf8)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.69766 2.81081C6.69766 2.36301 7.07249 2 7.53487 2H16.4651C16.9275 2 17.3023 2.36301 17.3023 2.81081V4.70269H22.0465C23.1254 4.70269 24 5.54972 24 6.59459V11.1297C24 11.872 23.5542 12.5315 22.8837 12.8392V20.1081C22.8837 21.153 22.0091 22 20.9302 22H3.06976C1.99088 22 1.11627 21.153 1.11627 20.1081V12.8392C0.445797 12.5315 0 11.872 0 11.1297V6.59459C0 5.54972 0.874607 4.70269 1.95349 4.70269H6.69766V2.81081ZM15.6279 3.62162V4.70269H8.37208V3.62162H15.6279ZM13.6744 13.2682V12.5405C13.6744 12.242 13.4245 12 13.1163 12H10.8837C10.5755 12 10.3256 12.242 10.3256 12.5405V13.2682L1.89105 11.3931C1.76428 11.3649 1.67442 11.2556 1.67442 11.1297V6.59459C1.67442 6.44532 1.79936 6.32432 1.95349 6.32432H22.0465C22.2006 6.32432 22.3256 6.44532 22.3256 6.59459V11.1297C22.3256 11.2556 22.2357 11.3649 22.1089 11.3931L13.6744 13.2682ZM13.6744 14.932V15.7838C13.6744 16.0823 13.4245 16.3243 13.1163 16.3243H10.8837C10.5755 16.3243 10.3256 16.0823 10.3256 15.7838V14.932L2.79069 13.2569V20.1081C2.79069 20.2574 2.91563 20.3784 3.06976 20.3784H20.9302C21.0844 20.3784 21.2093 20.2574 21.2093 20.1081V13.2569L13.6744 14.932ZM11.4419 15.2432V13.0811H12.5582V15.2432H11.4419Z" fill="#222222"></path></g><defs><clipPath id="clip0__WyFjXOf8"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg>
+        <p>Portfolio</p>
+    </div>
+
+    <span class="f">Photo by Hayden Scott
+
+    </span>
+    <div class="middle">
+        <h1>Designed and built for photographers</h1>
+        <p>Create your own high-quality website in minutes. Portfolios allows you to share your work externally so you can build your own brand and market yourself as a professional photographer.</p>
+    </div>
+
+    <div class="view">
+        <button>Get Started</button>
+    </div>
+
+    <div class="comp">
+        
+    </div>
+    <div class="girl">
+        <svg width="54" height="54" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.04071 19.9521C3.75862 19.6694 3.30004 19.6694 3.01795 19.9521L0.51528 22.4584C0.233188 22.7426 0.233188 23.2006 0.51528 23.4847C0.65705 23.6253 0.842218 23.6964 1.02739 23.6964C1.21256 23.6964 1.39772 23.6253 1.53949 23.4847L4.04071 20.977C4.32281 20.6943 4.32281 20.2348 4.04071 19.9521Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.47011 19.5221C4.61612 19.6684 4.80684 19.7401 4.99755 19.7401C5.18678 19.7401 5.3775 19.6684 5.52351 19.5221L7.67801 17.3632C7.97004 17.0705 7.97004 16.5987 7.67801 16.3076C7.38746 16.015 6.91663 16.015 6.6246 16.3076L4.47011 18.4665C4.17956 18.7577 4.17956 19.231 4.47011 19.5221Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.6909 19.6426C7.41583 19.3669 6.96867 19.3669 6.6936 19.6426L3.8512 22.4903C3.57613 22.766 3.57613 23.2128 3.8512 23.4899C3.98944 23.6271 4.17 23.6964 4.35056 23.6964C4.53112 23.6964 4.71168 23.6271 4.84851 23.4899L7.6909 20.6422C7.96597 20.3665 7.96597 19.9183 7.6909 19.6426Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.99913 16.288L1.11172 19.1815C0.844269 19.4494 0.844269 19.8813 1.11172 20.1478C1.24409 20.2818 1.41875 20.3487 1.59341 20.3487C1.76808 20.3487 1.94274 20.2818 2.07647 20.1478L4.96387 17.2543C5.22996 16.9878 5.22996 16.5545 4.96387 16.288C4.69778 16.0215 4.26522 16.0215 3.99913 16.288Z" fill="white"></path><mask id="mask0__DWf53vKn" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="54" height="54"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="white"></path></mask><g mask="url(#mask0__DWf53vKn)"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.146 10.764L13.5516 15.3672L13.1197 14.933L17.0953 10.9497C17.367 10.6774 17.367 10.2348 17.0953 9.96254C16.8235 9.68888 16.3818 9.68888 16.1101 9.96254L12.1345 13.9459L11.0879 12.8987L8.62427 10.4303L13.2186 5.82699C13.6812 5.36485 14.1843 4.95018 14.711 4.56622L16.889 6.74709C17.0256 6.88391 17.204 6.95233 17.3823 6.95233C17.5607 6.95233 17.7391 6.88391 17.8742 6.74709L19.8418 4.77565C20.1149 4.50339 20.1149 4.0608 19.8418 3.78854L18.6769 2.62131C18.9528 2.53475 19.2134 2.43143 19.499 2.36022L19.7262 2.30298L21.6631 4.2437L21.606 4.47128C20.9817 6.97048 19.8181 9.08852 18.146 10.764ZM11.4419 17.481L6.51453 12.5441L7.63907 11.4173L10.1028 13.8858L11.5854 15.3714C11.6021 15.3909 11.6105 15.4174 11.63 15.4384C11.6495 15.4579 11.6746 15.4649 11.6969 15.4831L12.5664 16.3543L11.4419 17.481ZM18.3646 4.28134L17.3822 5.26566L15.9093 3.79127C16.3301 3.55112 16.7788 3.34588 17.2331 3.14902L18.3646 4.28134ZM22.0576 2.66317L21.3037 1.90922L22.3084 1.6579L22.0576 2.66317ZM23.0692 7.24403C22.9145 6.87683 22.7236 6.5194 22.5299 6.16477C22.6804 5.71938 22.8406 5.27818 22.9577 4.80906L23.9415 0.866186C24.0014 0.628832 23.9317 0.377516 23.7589 0.204387C23.5861 0.0312581 23.3353 -0.0357595 23.097 0.0200885L19.1618 1.00581C18.6866 1.12448 18.2421 1.28505 17.7934 1.43863C17.4576 1.25712 17.1204 1.07841 16.765 0.926223C13.8443 -0.309415 10.4665 -0.310811 7.54433 0.927619C6.13273 1.52659 4.86605 2.38106 3.77913 3.4701C2.69221 4.56053 1.83801 5.82968 1.2416 7.24403C0.624281 8.70586 0.310747 10.2612 0.310747 11.8627C0.310747 13.298 0.576903 14.6914 1.07438 16.022L0.204842 16.8932C-0.0682808 17.1654 -0.0682808 17.6066 0.204842 17.8803C0.34001 18.0157 0.518377 18.0841 0.696743 18.0841C0.875109 18.0841 1.05347 18.0157 1.19004 17.8803L2.34384 16.7242C2.36614 16.7033 2.38704 16.6824 2.40655 16.66L4.72949 14.3339C5.00122 14.0603 5.00122 13.6191 4.72949 13.3468C4.45637 13.0732 4.01603 13.0732 3.7443 13.3468L2.1613 14.9315C1.85891 13.9416 1.70423 12.914 1.70423 11.8627C1.70423 10.4483 1.98014 9.07725 2.525 7.78576C3.05173 6.54035 3.80422 5.4192 4.76433 4.45722C5.72444 3.49663 6.84201 2.74128 8.0864 2.21352C10.6128 1.14403 13.5266 1.13146 16.0655 2.15488C15.5485 2.40759 15.0524 2.68823 14.5745 2.99539C14.4727 3.02751 14.3738 3.07637 14.293 3.15875C14.2832 3.16852 14.279 3.18109 14.2707 3.19226C13.5461 3.68512 12.8535 4.21986 12.2334 4.83978L7.14719 9.93591L5.03745 12.0512C4.76433 12.3234 4.76433 12.766 5.03745 13.0383L10.9486 18.961C11.0852 19.0978 11.2635 19.1662 11.4419 19.1662C11.6203 19.1662 11.7986 19.0978 11.9338 18.961L14.0449 16.8471L19.1312 11.751C20.2432 10.6368 21.1252 9.33136 21.822 7.88489C22.339 9.14845 22.6065 10.4832 22.6065 11.8627C22.6065 13.277 22.3292 14.6467 21.7857 15.9382C21.259 17.185 20.5051 18.3047 19.5436 19.2667C18.5863 20.2273 17.4701 20.9827 16.2243 21.5104C13.9544 22.4724 11.3834 22.5869 9.04233 21.8581L10.6267 20.2734C10.8984 19.9997 10.8984 19.5585 10.6267 19.2863C10.3536 19.0126 9.91325 19.0126 9.64013 19.2863L6.12437 22.8089C5.85124 23.0811 5.85124 23.5237 6.12437 23.796C6.25954 23.9328 6.4379 23.9998 6.61627 23.9998C6.79463 23.9998 6.973 23.9328 7.10956 23.796L7.95541 22.9485C9.29733 23.4595 10.7061 23.7304 12.1554 23.7304C13.7509 23.7304 15.3019 23.4176 16.7664 22.7963C18.1794 22.1973 19.4461 21.3415 20.5302 20.2538C21.6171 19.1648 22.4713 17.8957 23.0692 16.4813C23.6865 15.0181 24 13.4655 24 11.8627C24 10.2612 23.6865 8.70586 23.0692 7.24403Z" fill="white"></path></g></svg>
+        <P>Quests</P>
+    </div>
+    <span class="f">Photo by Raceala Elena
+    </span>
+     <div class="red">
+        <svg width="84" height="84" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.8 3C23.7 2.9 23.5 2.8 23.3 2.8H21.2V0.7C21.2 0.3 20.9 0 20.5 0H3.5C3.1 0 2.8 0.3 2.8 0.7V2.8H0.7C0.5 2.8 0.3 2.9 0.2 3C0.1 3.2 0 3.3 0 3.5V6.3C0 8 1.2 9.5 2.9 9.8C3.4 13.2 7.5 16 10 17.4C8.3 18.2 7.1 19.9 7.1 21.9V23.3C7.1 23.7 7.4 24 7.8 24H16.3C16.7 24 17 23.7 17 23.3V21.9C17 19.9 15.8 18.2 14.1 17.4C16.5 16 20.7 13.2 21.2 9.8C22.7 9.5 24 8.1 24 6.4V3.5C24 3.3 23.9 3.2 23.8 3ZM1.4 6.4V4.2H2.8V8.3C2 8.1 1.4 7.3 1.4 6.4ZM15.5 21.9V22.6H8.5V21.9C8.5 20 10.1 18.4 12 18.4C13.9 18.4 15.5 19.9 15.5 21.9ZM19.8 9.2C19.8 12.5 14.4 15.8 12 16.9C9.6 15.8 4.2 12.5 4.2 9.2V3.5V1.4H19.7V9.2H19.8ZM22.6 6.4C22.6 7.3 22 8.1 21.2 8.4V4.2H22.6V6.4Z" fill="#222222"></path><path d="M12 5.09998C10.1 5.09998 8.5 6.69998 8.5 8.59998C8.5 10.5 10.1 12.1 12 12.1C13.9 12.1 15.5 10.5 15.5 8.59998C15.5 6.69998 13.9 5.09998 12 5.09998ZM12 10.8C10.8 10.8 9.9 9.89998 9.9 8.69998C9.9 7.49998 10.8 6.59998 12 6.59998C13.2 6.59998 14.1 7.49998 14.1 8.69998C14.1 9.89998 13.2 10.8 12 10.8Z" fill="#222222"></path></svg>
+        <div class="divya">
+            <h1>Take photos. Win prizes.</h1>
+            <p>Quests are creative photo challenges that encourage you to test your skills and submit your best work for a chance to win exciting prizes. We launch new Quests with unique themes every week so there is always something for everyone!</p> 
+            <button>View Quests</button>
+        </div>
+     </div>
+     <div class="base">
+        <svg width="54" height="54" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6.77647C24 5.64706 23.0118 4.65882 21.8824 4.65882C20.7529 4.65882 19.7647 5.64706 19.7647 6.77647C19.7647 7.48235 20.1882 8.18824 20.6118 8.47059L17.0824 12.5647L12.9882 3.95294C13.6941 3.67059 14.1176 2.96471 14.1176 2.11765C14.1176 0.988235 13.1294 0 12 0C10.8706 0 9.88235 0.988235 9.88235 2.11765C9.88235 2.96471 10.3059 3.67059 11.0118 3.95294L6.91765 12.5647L3.38824 8.61176C3.81176 8.18824 4.23529 7.48235 4.23529 6.77647C4.23529 5.64706 3.24706 4.65882 2.11765 4.65882C0.988235 4.65882 0 5.64706 0 6.77647C0 7.76471 0.705882 8.61176 1.55294 8.75294L3.95294 19.7647H3.52941C3.10588 19.7647 2.82353 20.0471 2.82353 20.4706V23.2941C2.82353 23.7176 3.10588 24 3.52941 24H20.4706C20.8941 24 21.1765 23.7176 21.1765 23.2941V20.4706C21.1765 20.0471 20.8941 19.7647 20.4706 19.7647H20.0471L22.4471 8.89412C23.2941 8.61176 24 7.76471 24 6.77647ZM21.8824 6.07059C22.3059 6.07059 22.5882 6.35294 22.5882 6.77647C22.5882 7.2 22.3059 7.48235 21.8824 7.48235C21.4588 7.48235 21.1765 7.2 21.1765 6.77647C21.1765 6.35294 21.4588 6.07059 21.8824 6.07059ZM12 1.41176C12.4235 1.41176 12.7059 1.69412 12.7059 2.11765C12.7059 2.54118 12.4235 2.82353 12 2.82353C11.5765 2.82353 11.2941 2.54118 11.2941 2.11765C11.2941 1.69412 11.5765 1.41176 12 1.41176ZM2.11765 6.07059C2.54118 6.07059 2.82353 6.49412 2.82353 6.77647C2.82353 7.05882 2.54118 7.48235 2.11765 7.48235C1.69412 7.48235 1.41176 7.2 1.41176 6.77647C1.41176 6.35294 1.69412 6.07059 2.11765 6.07059ZM19.7647 22.5882H4.23529V21.1765H4.8H19.2H19.7647V22.5882ZM18.6353 19.7647H5.36471L3.38824 10.7294L6.49412 14.2588C6.63529 14.4 6.91765 14.5412 7.05882 14.5412C7.34118 14.5412 7.48235 14.4 7.62353 14.1176L11.8588 5.08235L16.0941 14.1176C16.2353 14.4 16.3765 14.5412 16.6588 14.5412C16.9412 14.5412 17.0824 14.5412 17.2235 14.2588L20.3294 10.7294L18.6353 19.7647Z" fill="#222222"></path><path d="M12 12.7059C10.8706 12.7059 9.88232 13.6941 9.88232 14.8235C9.88232 15.9529 10.8706 16.9412 12 16.9412C13.1294 16.9412 14.1176 15.9529 14.1176 14.8235C14.1176 13.6941 13.1294 12.7059 12 12.7059ZM12 15.5294C11.5764 15.5294 11.2941 15.247 11.2941 14.8235C11.2941 14.4 11.5764 14.1176 12 14.1176C12.4235 14.1176 12.7059 14.4 12.7059 14.8235C12.7059 15.247 12.4235 15.5294 12 15.5294Z" fill="#222222"></path></svg>
+        <p>Licensing</p>
+     </div>
+     <span class="f">Photo by Benny Bulke
+
+     </span>
+
+     <div class="class">
+        <svg width="84" height="84" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0__STmL5OSl)"><path d="M15.5 8.79999C14.2 8.79999 13.1 9.89999 13.1 11.2C13.1 12.5 14.2 13.6 15.5 13.6C16.8 13.6 17.9 12.5 17.9 11.2C17.9 9.79999 16.8 8.79999 15.5 8.79999ZM15.5 12.2C14.9 12.2 14.4 11.7 14.4 11.1C14.4 10.5 14.9 9.99999 15.5 9.99999C16.1 9.99999 16.6 10.5 16.6 11.1C16.6 11.7 16.1 12.2 15.5 12.2Z" fill="#222222"></path><path d="M23.2999 9.6H20.6999C20.2999 8.3 19.4999 7.2 18.5999 6.3L18.4999 6.2V1.6C18.4999 1.4 18.3999 1.1 18.0999 1C17.8999 1 17.6999 1 17.4999 1.1L13.9999 3.9C13.3999 3.8 12.8999 3.7 12.3999 3.7C10.7999 3.7 9.19994 4.2 7.79994 5C7.39994 4.7 6.79994 4.5 6.19994 4.5C4.79994 4.4 3.59994 5.6 3.59994 7C3.59994 7.7 3.89994 8.3 4.29994 8.7C3.89994 9.6 3.59994 10.6 3.49994 11.6C3.19994 12.1 2.59994 12.8 2.19994 12.8C1.89994 12.8 1.49994 12.4 1.19994 11.7C1.09994 11.4 0.69994 11.2 0.29994 11.4C-6.02603e-05 11.5 -0.20006 11.9 -6.02603e-05 12.3C0.49994 13.5 1.29994 14.2 2.09994 14.2H2.19994C2.69994 14.2 3.19994 14 3.49994 13.7C3.79994 15.6 4.59994 17.4 5.99994 18.7V22.3C5.99994 22.7 6.29994 22.9 6.69994 22.9H10.1999C10.5999 22.9 10.8999 22.6 10.8999 22.3V21.1C11.3999 21.2 11.8999 21.2 12.3999 21.2C12.5999 21.2 12.8999 21.2 13.0999 21.2V22.3C13.0999 22.7 13.3999 22.9 13.7999 22.9H17.2999C17.6999 22.9 17.9999 22.6 17.9999 22.3V19.3C18.2999 19.1 18.4999 18.9 18.7999 18.6C19.4999 17.9 20.0999 17.1 20.4999 16.2H23.3999C23.7999 16.2 24.0999 15.9 24.0999 15.6V10.2C23.9999 9.9 23.6999 9.6 23.2999 9.6ZM6.29994 5.7C6.79994 5.7 7.19994 6 7.39994 6.4C7.49994 6.6 7.59994 6.8 7.59994 7C7.59994 7.7 6.99994 8.3 6.29994 8.3C6.09994 8.3 5.99994 8.3 5.79994 8.2C5.69994 8.2 5.69994 8.2 5.69994 8.1C5.19994 8 4.89994 7.5 4.89994 7C4.89994 6.3 5.49994 5.7 6.29994 5.7ZM9.59994 21.7H7.39994V19.8C8.09994 20.3 8.79994 20.6 9.59994 20.9V21.7ZM16.5999 21.7H14.3999V21C15.1999 20.8 15.8999 20.6 16.5999 20.2V21.7ZM22.6999 15H19.9999C19.6999 15 19.4999 15.2 19.3999 15.4C18.9999 16.3 18.4999 17.1 17.7999 17.8C16.3999 19.2 14.4999 20 12.3999 20C10.2999 20 8.49994 19.2 6.99994 17.8C5.59994 16.4 4.79994 14.5 4.79994 12.5C4.79994 11.5 4.99994 10.4 5.39994 9.5H5.49994C5.79994 9.6 5.99994 9.6 6.29994 9.6C6.79994 9.6 7.29994 9.5 7.59994 9.2L6.69994 10.1C6.39994 10.4 6.39994 10.8 6.69994 11C6.79994 11.1 6.99994 11.2 7.19994 11.2C7.39994 11.2 7.49994 11.1 7.69994 11L10.2999 8.4C10.5999 8.1 10.5999 7.7 10.2999 7.5C9.99994 7.3 9.59994 7.2 9.39994 7.5L8.49994 8.4C8.69994 8 8.89994 7.5 8.89994 7C8.89994 6.6 8.79994 6.3 8.69994 5.9C9.79994 5.3 11.0999 4.9 12.3999 4.9C12.8999 4.9 13.4999 5 14.0999 5.1C14.2999 5.1 14.4999 5.1 14.6999 5L17.1999 3V6.5C17.1999 6.7 17.2999 6.9 17.3999 7C17.4999 7.1 17.4999 7.1 17.5999 7.2L17.6999 7.3C18.5999 8.2 19.1999 9.3 19.5999 10.5C19.6999 10.8 19.8999 11 20.1999 11H22.5999V15H22.6999Z" fill="#222222"></path></g><defs><clipPath id="clip0__STmL5OSl"><rect y="1" width="24" height="24" fill="white"></rect></clipPath></defs></svg>
+        <div class="class1">
+            <h1>PAID</h1>    </h1>
+            <p>Don’t let your photos sit there gathering dust, like on other platforms.</p> 
+            <button>Tell Me</button>
+        </div>
+    </div>
+    <span class="bottom">Photos by Junior Asiama</span>
+   <div class="box1">
+        <h1>Join our community today</h1>
+        <p>Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography.</p>
+        <button>Sign up</button>
+   </div>
+   <footer>
+       
+    
+        <div class="footer">
+            <div class="footer-item">
+                <a href="faq"><b>Company</b></a>
+                <a href="faq">Newsroom</a>
+                <a href="faq">About us</a>
+                <a href="faq">Careers</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="faq"><b>By community</b></a>
+                <a href="faq">Popular photos</a>
+                <a href="faq">Editors' Choice</a>
+                <a href="faq">Quests</a>
+                <a href="faq">Portfolio</a>
+               
+            </div>
+
+            <div class="footer-item">
+                <a href="faq"><b>Licensing</b></a>
+                <a href="faq">About Licensing</a>
+                <a href="faq">Become a Contributor</a>
+                <a href="faq">Submission requirements</a>
+                <a href="faq">Content types</a>
+                <a href="faq">Distribution</a>
+                
+            </div>
+
+            <div class="footer-item">
+                <a href="faq"><b>Social</b></a>
+                <a href="faq">Facebook</a>
+                <a href="faq">Twitter</a>
+                <a href="faq">Instagram</a>
+                <a href="faq">Pinterest</a>
+                
+            </div>
+        </div>
+    </footer>
+ 
+    <div class="separation"></div>
+    <h3>© 500px</h3>
+ <div class="last">
+    <span>Terms</span>
+    <span>Privacy</span>
+    <span>Support</span>
+<div>
+
+
+</body>
+</html>
