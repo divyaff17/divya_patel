@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students=["Harry","Ron","Hermoine","Draco","Neville","Luna","Ginny","Fred","George","Cho","Cedric"]
+        let house=[];
+        for(const student of students){
+            if(students.length<6){
+                house.push("Gryffindor");
+            }
+            else if(students.length<8){
+                house.push("Slytherin");
+            }
+            else if(students.length<12){
+                house.push("Hufflepuff");
+
+            }
+            else{
+                house.push("pachwati");
+            }
+        }
+        console.log(house);
+    </script>
+</body>
+</html>
